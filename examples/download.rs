@@ -1,12 +1,3 @@
-# p3get
-
-`p3get` is a rust library for easily creating file downloader with **p3**: Parallel, Pacman-like Progressbar.
-
-## Usage
-
-Example:
-
-```rust
 use p3get::Downloader;
 use p3get::P3Task;
 
@@ -39,20 +30,3 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     downloader.parallel(2).download().await?;
     Ok(())
 }
-```
-
-Output will be like:
-
-```
-a.torrent     46.59KiB 110.78KiB/s 00:00:00 [######################################] 100%
-b.tar.gz       4.54MiB   1.83MiB/s 00:01:27 [##------------------------------------]   3%
-index.html        227B      468B/s 00:00:00 [######################################] 100%
-Downloading...         Total (2/3) 00:00:01 [##########################------------]  67%
-```
-
-## TODO
-
-This project is WIP.
-
-- error handling
-- show total bytes and speed on total progress bar
