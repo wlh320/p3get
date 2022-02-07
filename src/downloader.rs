@@ -1,9 +1,8 @@
 use crate::P3Task;
 use futures::{stream, StreamExt};
+use indicatif::{MultiProgress, ProgressBar, ProgressStyle};
 use reqwest::Client;
 use std::{error::Error, sync::Arc};
-
-use indicatif::{MultiProgress, ProgressBar, ProgressStyle};
 
 /// P3 downloader, with Parallel Pacman-like Prograssbar
 pub struct Downloader {

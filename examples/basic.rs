@@ -1,7 +1,6 @@
 use p3get::Downloader;
 use p3get::P3Task;
 
-
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let resources = vec![

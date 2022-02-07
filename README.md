@@ -10,7 +10,6 @@ Example:
 use p3get::Downloader;
 use p3get::P3Task;
 
-
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let resources = vec![
@@ -54,5 +53,5 @@ Downloading...         Total (2/3) 00:00:01 [##########################---------
 
 This project is WIP.
 
-- error handling
+- better error handling
 - show total bytes and speed on total progress bar
